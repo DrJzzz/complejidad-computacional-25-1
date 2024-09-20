@@ -50,7 +50,7 @@ class InstanciaProblema:
             if acc * objeto.size > self.t:
                 break
             ## Paso no determinista
-            if random.randint(0, 1) == 1:
+            if random.randint(1, 3) != 1:
                 A.append(objeto)
                 acc *= objeto.size
         print()
