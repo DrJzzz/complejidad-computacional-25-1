@@ -16,7 +16,7 @@ class Objeto:
     
 
 class InstancaProblema:
-    def __init__(self, capacidad):
+    def __init__(self):
         self.objetos = self.generate_object_set(10, 40)
         self.capacidad = self.generate_random_k_or_C(False)
         self.k = self.generate_random_k_or_C(True)
@@ -87,7 +87,10 @@ class InstancaProblema:
             return "NO"
 
 
+def main():
+    instancaProblema = InstancaProblema()
+    instancaProblema.print_problem_input()
+    print(instancaProblema.algoritmo_mochila())
 
-instancaProblema = InstancaProblema(100)
-instancaProblema.print_problem_input()
-print(instancaProblema.algoritmo_mochila())
+if __name__ == "__main__":
+    main()
