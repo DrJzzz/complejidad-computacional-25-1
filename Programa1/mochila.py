@@ -29,19 +29,15 @@ class InstancaProblema:
         return obj
 
     def generate_random_k_or_C(self, k:bool):
-        c = 4
+        c = 6
         if k:
             c = 5
         acc = 0
         for o in self.objetos:
             acc += o.get_valor()
-        return random.randint((acc // 4), (acc // 6) * c) 
-    
-    def get_capacidad(self):
-        return self.capacidad
-
-    def get_objetos(self):
-        return self.objetos
+        ## Los valores de C y K son aleatorios pero
+        ## acotados solo para que sean mas frecuentes los YES
+        return random.randint((acc // 4), (acc // 7) * c) 
     
     def print_objetos(self):
         for objeto in self.objetos:
